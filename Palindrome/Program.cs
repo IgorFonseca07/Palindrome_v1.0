@@ -7,8 +7,12 @@ namespace Palindrome
         static void Main(string[] args)
         {
 
+            //Developed by Igor Oliveira Fonseca
+
+            Console.Write("Sequence of characters (word, number, phrase,...): ");
             string sequenceCharacters = Console.ReadLine().ToUpper().Trim();
             int quantityCharacters = sequenceCharacters.Length;
+            
 
             if (quantityCharacters % 2 == 0)
             {
@@ -48,9 +52,6 @@ namespace Palindrome
                     Console.WriteLine("It's not Palindrome!");
                 }
             }
-
-
-
 
         }
     }
