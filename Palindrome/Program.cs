@@ -8,18 +8,38 @@ namespace Palindrome
         {
 
             string sequenceCharacters = Console.ReadLine().ToUpper().Trim();
+            int quantityCharacters = sequenceCharacters.Length;
 
             if (sequenceCharacters.Length % 2 == 0)
             {
                 int count = 0;
-                for (int i = 0; i < (sequenceCharacters.Length / 2); i++)
+                for (int i = 0; i < (quantityCharacters / 2); i++)
                 {
-                    if (sequenceCharacters[i] == sequenceCharacters[(sequenceCharacters.Length) - i])
+                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - i])
                     {
                         count++;
                     }
                 }
-                if (count == sequenceCharacters.Length / 2)
+                if (count == quantityCharacters / 2)
+                {
+                    Console.WriteLine("It's Palindrome!");
+                }
+                else
+                {
+                    Console.WriteLine("It's not Palindrome!");
+                }
+            }
+            else
+            {
+                int count = 0;
+                for (int i = 0; i <= ((quantityCharacters - 1) / 2); i++)
+                {
+                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - i])
+                    {
+                        count++;
+                    }
+                }
+                if (count == ((quantityCharacters - 1) / 2) + 1)
                 {
                     Console.WriteLine("It's Palindrome!");
                 }
@@ -30,8 +50,6 @@ namespace Palindrome
             }
 
 
-            Console.WriteLine(quantityCharacteres);
-            Console.WriteLine(sequenceCharacters);
 
 
         }
