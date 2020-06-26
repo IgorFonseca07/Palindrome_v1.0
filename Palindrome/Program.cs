@@ -10,12 +10,12 @@ namespace Palindrome
             string sequenceCharacters = Console.ReadLine().ToUpper().Trim();
             int quantityCharacters = sequenceCharacters.Length;
 
-            if (sequenceCharacters.Length % 2 == 0)
+            if (quantityCharacters % 2 == 0)
             {
                 int count = 0;
                 for (int i = 0; i < (quantityCharacters / 2); i++)
                 {
-                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - i])
+                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - (i + 1)])
                     {
                         count++;
                     }
@@ -34,7 +34,7 @@ namespace Palindrome
                 int count = 0;
                 for (int i = 0; i <= ((quantityCharacters - 1) / 2); i++)
                 {
-                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - i])
+                    if (sequenceCharacters[i] == sequenceCharacters[quantityCharacters - (i + 1)])
                     {
                         count++;
                     }
